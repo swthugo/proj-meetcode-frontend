@@ -1,0 +1,21 @@
+export const FIREBASE_SIGN_IN_URL = process.env.REACT_APP_FIREBASE_SIGN_IN_URL;
+export const FIREBASE_API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
+
+export const BACKEND_ADDRESS = process.env.REACT_APP_BACKEND_ADDRESS;
+export const ADMIN_SIGN_UP_URL = process.env.REACT_APP_ADMIN_SIGN_UP_URL;
+export const USER_SIGN_UP_URL = process.env.REACT_APP_USER_SIGN_UP_URL;
+
+export const ADMIN_DASHBOARD_URL = process.env.REACT_APP_ADMIN_DASHBOARD_URL;
+//   REACT_APP_ADMIN_DASHBOARD_URL=/admin/dashboard
+
+export const ADMIN_EDIT_PROBLEM_URL = process.env.REACT_APP_ADMIN_EDIT_URL;
+export const ADMIN_RUN_PROBLEM = process.env.REACT_APP_ADMIN_NEW_RUN_URL;
+export const ADMIN_SUBMIT_PROBLEM = process.env.REACT_APP_ADMIN_NEW_SUBMIT_URL;
+// REACT_APP_ADMIN_EDIT_PROBLEM_ID_URL=/admin/edit/
+// REACT_APP_ADMIN_ADD_NEW_RUN_URL=/admin/edit/new/run
+// REACT_APP_ADMIN_ADD_NEW_SUBMIT_URL=/admin/edit/new/submit
+
+export const USER_DASHBOARD_URL = process.env.REACT_APP_USER_DASHBOARD_URL;
+export const USER_SUBMISSION_URL = process.env.REACT_APP_USER_SUBMISSION_URL;
+// REACT_APP_USER_DASHBOARD_URL=/problem
+// REACT_APP_USER_SUBMISSION_URL=/problem/
