@@ -172,7 +172,7 @@ export default function QuestionEditPage() {
     if (response.error) {
       alert(`Error: ${response.error.message}`);
     } else {
-      setResult(response.data.consoleResult);
+      setResult(response.data.success === true ? "PASS" : "FAIL");
       setMessage(formatMessage(response.data.consoleMessage));
       setRightActiveTab("console");
       if (rightWidth < DEFAULT_WIDTH / 2) {
@@ -206,12 +206,12 @@ export default function QuestionEditPage() {
     if (response.error) {
       alert(`Error: ${response.error.message}`);
     } else {
-      setResult(response.data.result);
+      setResult(response.data.isSuccess === true ? "PASS" : "FAIL");
       setMessage(formatMessage(response.data.resultMessage));
       setRightActiveTab("console");
       setFormData({
         ...formData,
-        visibility: response.data.result === "PASS" ? true : false,
+        visibility: response.data.visibility,
       });
     }
 
