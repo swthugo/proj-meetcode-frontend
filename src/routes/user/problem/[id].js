@@ -66,13 +66,13 @@ export default function ProblemPage() {
     const fetchProblems = async () => {
       const result = await performAuthenticatedGetActionAsync(url);
 
-      console.log(result.data);
+      // console.log(result.data);
 
       if (result.error) {
-        console.log(result.message);
+        // console.log(result.message);
         if (result.tokenExpired) navigate("/login");
       } else {
-        console.log(result.data.placeholder);
+        // console.log(result.data.placeholder);
         setData(result.data);
         setFormData({
           solution: result.data.placeholder,
@@ -169,9 +169,9 @@ export default function ProblemPage() {
     if (response.error) {
       alert(`Error: ${response.error.message}`);
     } else {
-      console.log(response.data);
-      setResult(response.data.consoleResult);
-      setMessage(formatMessage(response.data.consoleMessage));
+      // console.log(response.data);
+      setResult(response.data.success === true ? "PASS" : "FAIL");
+      setMessage(formatMessage(response.data.message));
 
       setRightActiveTab("console");
       if (rightWidth < DEFAULT_WIDTH / 2) {
