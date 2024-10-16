@@ -15,10 +15,9 @@ export default function SignUp() {
     setLoading(true);
 
     const formData = new FormData(e.currentTarget);
-
     const endpoint = BACKEND_ADDRESS + USER_SIGN_UP_URL;
 
-    console.log("USER_SIGN_UP_URL: " + USER_SIGN_UP_URL);
+    console.log("endpoint: " + USER_SIGN_UP_URL);
 
     const data = {
       displayName: formData.get("name"),
@@ -26,14 +25,11 @@ export default function SignUp() {
       password: formData.get("password"),
     };
 
-    // console.log("Register data:" + data.email);
-
     const response = await performPostActionAsync(endpoint, data);
 
     if (response.error) {
       alert(response.message);
     } else {
-      // alert("You've successfully signed up!");
       navigate("/login");
     }
 
@@ -107,9 +103,11 @@ export default function SignUp() {
             <button className="btn-submit bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-4 py-2 rounded-lg">
               {loading ? <LoadingIcon className="size-6" /> : "Sign Up"}
             </button>
-            <div >
+            <div>
               Already have an account?{" "}
-              <u className="cursor-pointer" onClick={() => navigate("/login")}>Go to Log in</u>
+              <u className="cursor-pointer" onClick={() => navigate("/login")}>
+                Go to Log in
+              </u>
             </div>
           </form>
         </div>
