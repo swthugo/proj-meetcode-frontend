@@ -1,7 +1,7 @@
 import React from "react";
 import AceEditor from "react-ace";
 import "ace-builds/webpack-resolver";
-import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/theme-chrome";
 import "ace-builds/src-noconflict/mode-javascript";
 
 export default function AceEditorComponent({ name, value, onChange }) {
@@ -10,7 +10,7 @@ export default function AceEditorComponent({ name, value, onChange }) {
   return (
     <AceEditor
       mode="java"
-      theme="github"
+      theme="chrome"
       onChange={onChange}
       value={value == null ? codePlaceholder : value}
       name="UNIQUE_ID"
